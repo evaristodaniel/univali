@@ -11,6 +11,8 @@
 
 using namespace std;
 
+// Procedimento para converter Binário para decimal
+
 void converteBinarioDecimal () {
     int binario,resto, decimal = 0, i = 0;
     cout << "Entre com o valor em Binário: ";
@@ -21,8 +23,12 @@ void converteBinarioDecimal () {
         decimal += resto * pow(2,i);
         ++i;
     }
-        cout << "Valor BINÁRIO, convertido para DECIMAL: " << decimal << endl << endl;
+    cout << "Valor BINÁRIO, convertido para DECIMAL: " << decimal << endl << endl;
 }
+
+// Procedimento para converter Decimal para Binário.
+// Utilizamos um vetor de 8 posições responsável por armazenar o resto da divisão.
+// O armazenamento do resto ocorre de trás para frente, com a intenção de guardar na forma inversa.
 
 void converteDecimalBinario () {
     int vet[8], cont=7, decimal;
@@ -42,8 +48,10 @@ void converteDecimalBinario () {
     cout << "Valor DECIMAL, convertido para BINÁRIO: ";
     
     for(int i=cont+1; i < 8 ;i++)
-        cout << vet[i] << endl << endl;
+        cout << vet[i];
 }
+
+// Procedimento para desenha a calculadora.
 
 void menu () {
     cout <<"         _____________________"     <<endl;
@@ -66,18 +74,19 @@ void menu () {
 
 }
 
-int main()
-{
+// Inicio do programa
+
+int main() {
     int op;
     
-    menu();
+    menu();                                         // Chama procedimento para desenhar calculadora
     cout << "$: ";
-    cin  >> op;
+    cin  >> op;                                     // Leitura da opção desejada pelo usuário.
     
-    switch (op) {
+    switch (op) {                                   // Caso digite 1 converte Binario para Decimal e 2 Decimal para Bin.
         case 1:converteBinarioDecimal(); break;
         case 2:converteDecimalBinario(); break;
-        default: cout<<"Opção inválida";
+        default: cout<<"Opção inválida";            // Caso digite algo diferente de 1 e 2 apresenta mensagem de oção inválida.
     }
     
     return 0;
