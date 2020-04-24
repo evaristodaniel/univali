@@ -58,8 +58,8 @@ void menu () {
     cout <<"        |    CALCULADORA      |"    <<endl;
     cout <<"        |  _________________  |"    <<endl;
     cout <<"        | |Pressione...     | |"    <<endl;
-    cout <<"        | |1.Decimal-Binário| |"    <<endl;
-    cout <<"        | |2.Binário-Decimal| |"    <<endl;
+    cout <<"        | |1.Binário-Decimal| |"    <<endl;
+    cout <<"        | |2.Decimal-Binário| |"    <<endl;
     cout <<"        | |_________________| |"    <<endl;
     cout <<"        |  ___ ___ ___   ___  |"    <<endl;
     cout <<"        | | 7 | 8 | 9 | | + | |"    <<endl;
